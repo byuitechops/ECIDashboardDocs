@@ -46,12 +46,18 @@
         .inline {
             display: inline-block;
         }
+        
+        .italic {
+            font-style: italic;
+        }
+
     </style>
     <script src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
     <script>
         mermaid.initialize({
             startOnLoad: true
         });
+
     </script>
 </head>
 
@@ -72,13 +78,13 @@
                     <h2 class="inline">Who do I need to contact today and why?</h2>
                     <h3>Required Data</h3>
                     <ul>
-                        <li>High Performers</li>
-                        <li>low Performers</li>
+                        <li>High Performers - <span class="italic">Gradebook</span></li>
+                        <li>low Performers - <span class="italic">Gradebook</span></li>
                         <li>Students New to the Course</li>
                         <li>Students who haven't been contacted in a while</li>
-                        <li>Students who earned a badge</li>
-                        <li>Students who failed a mastery check</li>
-                        <li>Students who have fresh feedback</li>
+                        <li>Students who earned a badge - <span class="italic">Gradebook</span></li>
+                        <li>Students who failed a mastery check - <span class="italic">Gradebook</span></li>
+                        <li>Students who have fresh feedback - <span class="italic">Gradebook</span></li>
                     </ul>
                     <h3>Data Retrieval</h3>
                 </li>
@@ -93,7 +99,7 @@
                     <h2 class="inline">What do I see on my dashboard?</h2>
                     <h3>Required Data</h3>
                     <ul>
-                        <li>List of all students in my class/ group</li>
+                        <li>List of all students in my class/ group - <span class="italic">Gradebook</span></li>
                     </ul>
                     <h3>Data Retrieval</h3>
                 </li>
@@ -103,10 +109,10 @@
                     <h3>Required Data</h3>
                     <ul>
                         <li>Student Profile Info</li>
-                        <li>Badges</li>
-                        <li>mastery / Pace - mastery checks completed</li>
+                        <li>Badges - <span class="italic">Gradebook</span></li>
+                        <li>mastery / Pace (mastery checks completed) - <span class="italic">Gradebook</span></li>
                         <li>Goals</li>
-                        <li>performance - earned over attempted</li>
+                        <li>performance (earned over attempted) - <span class="italic">Gradebook</span></li>
                         <li>time in program</li>
                         <li>time last week</li>
                         <li>activity in course(?)</li>
