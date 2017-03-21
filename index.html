@@ -4,86 +4,130 @@
 <head>
     <title>Instructor Dashboard</title>
     <style type="text/css">
-
+        body {
+            background-color: #f5f2f2;
+        }
+        
+        main {
+            padding: 50px;
+            background-color: white;
+            font-family: arial, sans-serif;
+            margin: auto;
+            width: 80%;
+        }
+        
+        img {
+            float: right;
+            width: 45vw;
+        }
+        
+        .priority {
+            height: 20px;
+            width: 20px;
+            margin: 0 10px;
+        }
+        
+        .high {
+            background-color: red;
+        }
+        
+        .medium {
+            background-color: green;
+        }
+        
+        .low {
+            background-color: dodgerblue;
+        }
+        
+        .wrapper {
+            display: flex;
+        }
+        
+        .inline {
+            display: inline-block;
+        }
     </style>
     <script src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true
+        });
+    </script>
 </head>
 
 <body>
-    <h1>Instructor Dashoard</h1>
-    <img src="https://github.com/byuitechops/ECIDashboardDocs/blob/master/instructor-dashboard.gif?raw=true" alt="Instructor Dashboard">
-    <h1>Outcomes</h1>
-    <div>
-        <ol>
-            <li>
-                <h2>Who do I need to contact today and why?</h2>
-                <h3>Required Data</h3>
-                <ul>
-                    <li>High Performers</li>
-                    <li>low Performers</li>
-                    <li>Students New to the Course</li>
-                    <li>Students who haven't been contacted in a while</li>
-                    <li>Students who earned a badge</li>
-                    <li>Students who failed a mastery check</li>
-                    <li>Students who have fresh feedback</li>
-                </ul>
-                <h3>Data Retrieval</h3>
-            </li>
-            <li>
-                <h2>Who Contacted a student last?</h2>
-                <h3>Required Data</h3>
-                <h3>Data Retrieval</h3>
-            </li>
-            <li>
-                <h2>What do I see on my dashboard?</h2>
-                <h3>Required Data</h3>
-                <ul>
-                    <li>List of all students in my class/ group</li>
-                </ul>
-                <h3>Data Retrieval</h3>
-            </li>
-            <li>
-                <h2>What do I know about my student?</h2>
-                <h3>Required Data</h3>
-                <ul>
-                    <li>Student Profile Info</li>
-                    <li>Badges</li>
-                    <li>mastery / Pace - mastery checks completed</li>
-                    <li>Goals</li>
-                    <li>performance - earned over attempted</li>
-                    <li>time in program</li>
-                    <li>time last week</li>
-                    <li>activity in course(?)</li>
-                </ul>
-                <h3>Data Retrieval</h3>
-            </li>
-            <li>
-                <h2>How is my class doing?</h2>
-                <h3>Required Data</h3>
-                <ul>
-                    <li>Individual students stats graph</li>
-                </ul>
-                <h3>Data Retrieval</h3>
-                <div class="mermaid">
-                    sequenceDiagram
-                        Participant A as D2L
-                        Participant B as BYUI LTI
-                        Participant C as Learnosity
-
-                        A ->> B: Sends query with activityId on url
-                        Note over B: Request is generated with signature
-                        Note over A, B: Learnosity Frame is populated with Assessment
-                        Note over A, B: Assessment is taken by student
-                        B ->> C: Submission sent to Learnosity
-                        Note over C: Auto grading takes place
-                        C -->> B: Learnosity responds to lis_response_url with results
-                        B ->> A: LTI uses valence to send back the graded information 
-                </div>
-            </li>
-        </ol>
-    </div>
-
+    <main>
+        <h1>Instructor Dashoard</h1>
+        <img src="https://github.com/byuitechops/ECIDashboardDocs/blob/master/instructor-dashboard.gif?raw=true" alt="Instructor Dashboard">
+        <div class="wrapper">
+            <div class="priority high"></div>High
+            <div class="priority medium"></div>Medium
+            <div class="priority low"></div>Low
+        </div>
+        <div>
+            <h1>Outcomes</h1>
+            <ol>
+                <li>
+                    <div class="priority high inline"></div>
+                    <h2 class="inline">Who do I need to contact today and why?</h2>
+                    <h3>Required Data</h3>
+                    <ul>
+                        <li>High Performers</li>
+                        <li>low Performers</li>
+                        <li>Students New to the Course</li>
+                        <li>Students who haven't been contacted in a while</li>
+                        <li>Students who earned a badge</li>
+                        <li>Students who failed a mastery check</li>
+                        <li>Students who have fresh feedback</li>
+                    </ul>
+                    <h3>Data Retrieval</h3>
+                </li>
+                <li>
+                    <div class="priority low inline"></div>
+                    <h2 class="inline">Who Contacted a student last?</h2>
+                    <h3>Required Data</h3>
+                    <h3>Data Retrieval</h3>
+                </li>
+                <li>
+                    <div class="priority high inline"></div>
+                    <h2 class="inline">What do I see on my dashboard?</h2>
+                    <h3>Required Data</h3>
+                    <ul>
+                        <li>List of all students in my class/ group</li>
+                    </ul>
+                    <h3>Data Retrieval</h3>
+                </li>
+                <li>
+                    <div class="priority medium inline"></div>
+                    <h2 class="inline">What do I know about my student?</h2>
+                    <h3>Required Data</h3>
+                    <ul>
+                        <li>Student Profile Info</li>
+                        <li>Badges</li>
+                        <li>mastery / Pace - mastery checks completed</li>
+                        <li>Goals</li>
+                        <li>performance - earned over attempted</li>
+                        <li>time in program</li>
+                        <li>time last week</li>
+                        <li>activity in course(?)</li>
+                    </ul>
+                    <h3>Data Retrieval</h3>
+                </li>
+                <li>
+                    <div class="priority low inline"></div>
+                    <h2 class="inline">How is my class doing?</h2>
+                    <h3>Required Data</h3>
+                    <ul>
+                        <li>Individual students stats graph</li>
+                    </ul>
+                    <h3>Data Retrieval</h3>
+                    <div class="mermaid">
+                        sequenceDiagram; Participant A as D2L; Participant B as BYUI LTI; Participant C as Learnosity; A ->> B: Sends query with activityId on url; Note over B: Request is generated with signature; Note over A, B: Learnosity Frame is populated with Assessment; Note over A, B: Assessment is taken by student; B ->> C: Submission sent to Learnosity; Note over C: Auto grading takes place; C -->> B: Learnosity responds to lis_response_url with results; B ->> A: LTI uses valence to send back the graded information;
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </main>
 </body>
 
 </html>
