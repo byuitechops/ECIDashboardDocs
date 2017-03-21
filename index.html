@@ -6,11 +6,13 @@
     <style type="text/css">
 
     </style>
+    <script src="mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
 </head>
 
 <body>
     <h1>Instructor Dashoard</h1>
-    <img src="" height="500px" width="800px">
+    <img src="instructor-dashboard.gif" alt="Instructor Dashboard">
     <h1>Outcomes</h1>
     <div>
         <ol>
@@ -63,6 +65,21 @@
                     <li>Individual students stats graph</li>
                 </ul>
                 <h3>Data Retrieval</h3>
+                <div class="mermaid">
+                    sequenceDiagram
+                        Participant A as D2L
+                        Participant B as BYUI LTI
+                        Participant C as Learnosity
+
+                        A ->> B: Sends query with activityId on url
+                        Note over B: Request is generated with signature
+                        Note over A, B: Learnosity Frame is populated with Assessment
+                        Note over A, B: Assessment is taken by student
+                        B ->> C: Submission sent to Learnosity
+                        Note over C: Auto grading takes place
+                        C -->> B: Learnosity responds to lis_response_url with results
+                        B ->> A: LTI uses valence to send back the graded information 
+                </div>
             </li>
         </ol>
     </div>
