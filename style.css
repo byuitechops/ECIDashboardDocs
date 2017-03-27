@@ -24,6 +24,11 @@
             width: 45vw;
         }
         
+        img.smaller {
+            float: right;
+            width: 40vw;
+        }
+        
         .priority {
             height: 20px;
             width: 20px;
