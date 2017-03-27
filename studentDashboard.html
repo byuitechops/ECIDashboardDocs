@@ -50,12 +50,14 @@
         .italic {
             font-style: italic;
         }
+
     </style>
     <script src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
     <script>
         mermaid.initialize({
             startOnLoad: true
         });
+
     </script>
 </head>
 
@@ -73,27 +75,27 @@
             <h1>Outcomes</h1>
             <ol>
                 <li>
-                    <div class="priority high inline"></div>
-                    <h2 class="inline">Outcome 1</h2>
+                    <div class="priority medium inline"></div>
+                    <h2 class="inline">What are my Goals &amp; how can I change them?</h2>
                     <h3>Required Data</h3>
                     <ul>
-                        <li> <span class="italic"></span></li>
+                        <li>Goals Test Results<span class="italic">Pathway OR D2L</span></li>
                     </ul>
                     <h3>Data Retrieval</h3>
                 </li>
                 <li>
-                    <div class="priority low inline"></div>
-                    <h2 class="inline">How is my class doing?</h2>
+                    <div class="priority high inline"></div>
+                    <h2 class="inline">How Have I been doing on my assignments?</h2>
                     <h3>Required Data</h3>
                     <ul>
                         <li>Individual students stats graph</li>
                     </ul>
-                    <h3>Data Retrieval</h3>
-                    <div class="mermaid">
-                        sequenceDiagram; Participant A as D2L; Participant B as BYUI LTI; Participant C as Learnosity; A ->> B: Sends query with activityId on url; Note over B: Request is generated with signature; Note over A, B: Learnosity Frame is populated with Assessment; Note over A, B: Assessment is taken by student; B ->> C: Submission sent to Learnosity; Note over C: Auto grading takes place; C -->> B: Learnosity responds to lis_response_url with results; B ->> A: LTI uses valence to send back the graded information;
-                    </div>
                 </li>
             </ol>
+            <h2>Data Retrieval</h2>
+            <div class="mermaid">
+                sequenceDiagram; Participant A as D2L; Participant B as BYUI LTI; Participant C as Learnosity; A ->> B: Sends query with activityId on url; Note over B: Request is generated with signature; Note over A, B: Learnosity Frame is populated with Assessment; Note over A, B: Assessment is taken by student; B ->> C: Submission sent to Learnosity; Note over C: Auto grading takes place; C -->> B: Learnosity responds to lis_response_url with results; B ->> A: LTI uses valence to send back the graded information;
+            </div>
         </div>
     </main>
 </body>

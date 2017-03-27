@@ -50,19 +50,21 @@
         .italic {
             font-style: italic;
         }
+
     </style>
     <script src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
     <script>
         mermaid.initialize({
             startOnLoad: true
         });
+
     </script>
 </head>
 
 <body>
     <main>
         <a href="https://byuitechops.github.io/eci-dashboard-docs/">Home</a>
-        <h1>Instructor Dashoard</h1>
+        <h1>Instructor Dashboard</h1>
         <img src="https://github.com/byuitechops/ECIDashboardDocs/blob/master/instructor-dashboard.gif?raw=true" alt="Instructor Dashboard">
         <div class="wrapper">
             <div class="priority high"></div>High
@@ -77,60 +79,51 @@
                     <h2 class="inline">Who do I need to contact today and why?</h2>
                     <h3>Required Data</h3>
                     <ul>
-                        <li>High Performers - <span class="italic">Gradebook</span></li>
-                        <li>low Performers - <span class="italic">Gradebook</span></li>
-                        <li>Students New to the Course</li>
+                        <li>High Performers - <span class="italic">D2L Gradebook</span></li>
+                        <li>low Performers - <span class="italic">D2L Gradebook</span></li>
+                        <li>Students New to the Course - <span class="italic">D2L</span></li>
                         <li>Students who haven't been contacted in a while</li>
-                        <li>Students who earned a badge - <span class="italic">Gradebook</span></li>
-                        <li>Students who failed a mastery check - <span class="italic">Gradebook</span></li>
-                        <li>Students who have fresh feedback - <span class="italic">Gradebook</span></li>
+                        <li>Students who earned a badge - <span class="italic">D2L Gradebook</span></li>
+                        <li>Students who failed a mastery check - <span class="italic">D2L Gradebook</span></li>
+                        <li>Students who have fresh feedback - <span class="italic">D2L Gradebook</span></li>
                     </ul>
-                    <h3>Data Retrieval</h3>
                 </li>
                 <li>
                     <div class="priority low inline"></div>
                     <h2 class="inline">Who Contacted a student last?</h2>
                     <h3>Required Data</h3>
-                    <h3>Data Retrieval</h3>
+                    <ul>
+                        <li>Not really sure where this is gonna come from...</li>
+                    </ul>
                 </li>
                 <li>
                     <div class="priority high inline"></div>
-                    <h2 class="inline">What do I see on my dashboard?</h2>
-                    <h3>Required Data</h3>
-                    <ul>
-                        <li>List of all students in my class/ group - <span class="italic">Gradebook</span></li>
-                    </ul>
-                    <h3>Data Retrieval</h3>
-                </li>
-                <li>
-                    <div class="priority medium inline"></div>
-                    <h2 class="inline">What do I know about my student?</h2>
+                    <h2 class="inline">What do I know about my students?</h2>
                     <h3>Required Data</h3>
                     <ul>
                         <li>Student Profile Info</li>
-                        <li>Badges - <span class="italic">Gradebook</span></li>
-                        <li>mastery / Pace (mastery checks completed) - <span class="italic">Gradebook</span></li>
-                        <li>Goals</li>
-                        <li>performance (earned over attempted) - <span class="italic">Gradebook</span></li>
-                        <li>time in program</li>
-                        <li>time last week</li>
+                        <li>Badges - <span class="italic">D2L Gradebook</span></li>
+                        <li>mastery / Pace (mastery checks completed) - <span class="italic">D2L Gradebook</span></li>
+                        <li>Goals - <span class="italic">Pathway</span></li>
+                        <li>performance (earned over attempted) - <span class="italic">D2L Gradebook</span></li>
+                        <li>time in program - <span class="italic">D2L</span></li>
+                        <li>time last week - <span class="italic">D2L</span></li>
                         <li>activity in course(?)</li>
                     </ul>
-                    <h3>Data Retrieval</h3>
                 </li>
                 <li>
                     <div class="priority low inline"></div>
                     <h2 class="inline">How is my class doing?</h2>
                     <h3>Required Data</h3>
                     <ul>
-                        <li>Individual students stats graph</li>
+                        <li>Individual students stats graph - <span class="italic">D2L</span></li>
                     </ul>
-                    <h3>Data Retrieval</h3>
-                    <div class="mermaid">
-                        sequenceDiagram; Participant A as D2L; Participant B as BYUI LTI; Participant C as Learnosity; A ->> B: Sends query with activityId on url; Note over B: Request is generated with signature; Note over A, B: Learnosity Frame is populated with Assessment; Note over A, B: Assessment is taken by student; B ->> C: Submission sent to Learnosity; Note over C: Auto grading takes place; C -->> B: Learnosity responds to lis_response_url with results; B ->> A: LTI uses valence to send back the graded information;
-                    </div>
                 </li>
             </ol>
+            <h2>Data Retrieval</h2>
+            <div class="mermaid">
+                sequenceDiagram; Participant A as D2L; Participant B as BYUI LTI; Participant C as Learnosity; A ->> B: Sends query with activityId on url; Note over B: Request is generated with signature; Note over A, B: Learnosity Frame is populated with Assessment; Note over A, B: Assessment is taken by student; B ->> C: Submission sent to Learnosity; Note over C: Auto grading takes place; C -->> B: Learnosity responds to lis_response_url with results; B ->> A: LTI uses valence to send back the graded information;
+            </div>
         </div>
     </main>
 </body>

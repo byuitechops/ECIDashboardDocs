@@ -50,12 +50,14 @@
         .italic {
             font-style: italic;
         }
+
     </style>
     <script src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
     <script>
         mermaid.initialize({
             startOnLoad: true
         });
+
     </script>
 </head>
 
@@ -63,7 +65,7 @@
     <main>
         <a href="https://byuitechops.github.io/eci-dashboard-docs/">Home</a>
         <h1>Missionary Dashoard</h1>
-        <img src="https://github.com/byuitechops/ECIDashboardDocs/blob/master/instructor-dashboard.gif?raw=true" alt="Instructor Dashboard">
+        <img src="" alt="Missionary Dashboard">
         <div class="wrapper">
             <div class="priority high"></div>High
             <div class="priority medium"></div>Medium
@@ -74,26 +76,46 @@
             <ol>
                 <li>
                     <div class="priority high inline"></div>
-                    <h2 class="inline">Outcome 1</h2>
+                    <h2 class="inline">What students do I need to contact today and why?</h2>
                     <h3>Required Data</h3>
+                    <ul>
+                        <li>High &amp; low performers - <span class="italic">D2L gradebook</span></li>
+                        <li>Students who haven't been contacted in a while</li>
+                    </ul>
                     <ul>
                         <li> <span class="italic"></span></li>
                     </ul>
                     <h3>Data Retrieval</h3>
                 </li>
                 <li>
-                    <div class="priority low inline"></div>
-                    <h2 class="inline">How is my class doing?</h2>
+                    <div class="priority high inline"></div>
+                    <h2 class="inline">What students are at critical milestones?</h2>
                     <h3>Required Data</h3>
                     <ul>
-                        <li>Individual students stats graph</li>
+                        <li>Students Who earned a badge - <span class="italic">D2L gradebook</span></li>
+                        <li>Students who failed a mastery check - <span class="italic">D2L gradebook</span></li>
+                    </ul>
+                    <ul>
+                        <li> <span class="italic"></span></li>
                     </ul>
                     <h3>Data Retrieval</h3>
-                    <div class="mermaid">
-                        sequenceDiagram; Participant A as D2L; Participant B as BYUI LTI; Participant C as Learnosity; A ->> B: Sends query with activityId on url; Note over B: Request is generated with signature; Note over A, B: Learnosity Frame is populated with Assessment; Note over A, B: Assessment is taken by student; B ->> C: Submission sent to Learnosity; Note over C: Auto grading takes place; C -->> B: Learnosity responds to lis_response_url with results; B ->> A: LTI uses valence to send back the graded information;
-                    </div>
+                </li>
+                <li>
+                    <div class="priority high inline"></div>
+                    <h2 class="inline">Who are my students?</h2>
+                    <h3>Required Data</h3>
+                    <ul>
+                        <li>Student Profile Picture - <span class="italic">D2L Profile Info</span></li>
+                        <li>Student Goals - <span class="italic">Pathway(?)</span></li>
+                        <li>Time in program - <span class="italic">D2L</span></li>
+                        <li>Student placement scores - <span class="italic">Pathway</span></li>
+                    </ul>
                 </li>
             </ol>
+            <h2>Data Retrieval</h2>
+            <div class="mermaid">
+                sequenceDiagram; Participant A as D2L; Participant B as BYUI LTI; Participant C as Learnosity; A ->> B: Sends query with activityId on url; Note over B: Request is generated with signature; Note over A, B: Learnosity Frame is populated with Assessment; Note over A, B: Assessment is taken by student; B ->> C: Submission sent to Learnosity; Note over C: Auto grading takes place; C -->> B: Learnosity responds to lis_response_url with results; B ->> A: LTI uses valence to send back the graded information;
+            </div>
         </div>
     </main>
 </body>
