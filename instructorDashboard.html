@@ -74,7 +74,8 @@
             </ol>
             <h2>Data Retrieval</h2>
             <div class="mermaid">
-                sequenceDiagram; Participant A as D2L; Participant B as BYUI LTI; Participant C as Learnosity; A ->> B: Sends query with activityId on url; Note over B: Request is generated with signature; Note over A, B: Learnosity Frame is populated with Assessment; Note over A, B: Assessment is taken by student; B ->> C: Submission sent to Learnosity; Note over C: Auto grading takes place; C -->> B: Learnosity responds to lis_response_url with results; B ->> A: LTI uses valence to send back the graded information;
+                sequenceDiagram; Participant a as Brightspace; Participant b as D2L; a->> b: Query students in a class/ group; b->> a: Returns students in current class/group; Note left of a: Brightspace as UI; Note right of b: D2L as storage; a->> b: Query grades of those students; b->> a: Returns grades of those students;
+
             </div>
         </div>
     </main>
