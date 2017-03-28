@@ -51,6 +51,7 @@
             </ol>
             <h2>Data Retrieval</h2>
             <div class="mermaid">
+                sequenceDiagram; Participant a as Brightspace; Participant b as D2L Gradebook; Participant c as Pathway; Note left of a: Brightspace as UI; Note right of b: D2L as storage; a->> c: Query for student data for all students in the group; c->> a: Return student data for all students in the group; a->> b: Query student's time information; b->> a: Return student's time information; a->> b: Query students grades; b->> a: Return students grades;
 
             </div>
         </div>
