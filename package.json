@@ -1,0 +1,14 @@
+{
+  "name": "eci-dashboard-docs",
+  "version": "1.0.0",
+  "description": "Documentation & wireframes on possible future ECI dashboards",
+  "main": "",
+  "scripts": {
+    "test": "NA"
+  },
+  "author": "Daniel Green",
+  "contributors": [{
+    "name": "Ben Harker"
+  }]
+  "license": "MIT",
+}
